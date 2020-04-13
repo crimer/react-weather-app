@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.weather {
+  &-sunny {
+    background-image: url("./assets/img/sunny.jpg");
+  }
+  &-storm {
+    background-image: url("./assets/img/storm.jfif");
+  }
+  &-snow {
+    background-image: url("./assets/img/snow.jfif");
+  }
+  &-rain {
+    background-image: url("./assets/img/rain.jfif");
+  }
+}
+
+.weather {
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 18px 16px rgba(201, 202, 221, 0.64);
+  background-color: white;
+  overflow: hidden;
+  min-width: 875px;
+  &__wrapper {
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+  }
+  &-picture {
+    min-width: 300px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
